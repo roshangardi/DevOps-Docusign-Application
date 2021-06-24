@@ -12,3 +12,23 @@
 - Docker.
 - Microsoft Azure pipelines (CI/CD Pipeline)
 - Microsoft Azure App Service
+
+### Intructions to run the application locally:
+- run.py is the entrypoint. Exectue run.py
+
+### Instructions to run the application as a container locally:
+- Install Docker Desktop client on the host.
+- Change directory to the application folder
+- Build the docker image from Dockerfile using below command:
+`$ docker build -t image_name .`
+
+- Check the list of images using:
+`$ docker image ls`
+
+- Create and run a single container from the image built in previous step using:
+`$ docker container run -d -p 5000:5000 --name container_name image_name`
+
+- Check if the container is running using:
+`$ docker container ls`
+
+- Go to "http://localhost:5000/" on the webrowser of your choice and you'll see your dockerized application running.
