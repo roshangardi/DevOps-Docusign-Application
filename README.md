@@ -16,7 +16,7 @@
 ### Intructions to run the application locally:
 - run.py is the entrypoint. Exectue run.py
 
-### Instructions to run the application as a container locally:
+### Instructions to run the application as a Docker Container locally:
 - Install Docker Desktop client on the host.
 - Change directory to the application folder
 - Build the docker image from Dockerfile using below command:
