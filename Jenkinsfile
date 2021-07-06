@@ -14,11 +14,8 @@ pipeline
 	{
 		stage('Cloning Git') {
 	  steps {
-
-	  git credentialsId: 'DocuSign_Git_Repo',
-		url: 'git@code.csulb.edu:URD/DocusignDemoApp.git',
-		branch: "master"
-		}
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/roshangardi/DevOps-Docusign-Application.git']]])
+            }
 		}
 
 		stage('Building image') {
