@@ -5,7 +5,7 @@
 - The application is used by students of California State University Long Beach for Video Production Request by registering on application website.
 - The Application bypasses the PowerForm signer Information page and redirects to main Docusign PowerForm.
 
-### Jenkins Workflow:
+### Jenkins CI/CD Pipeline Workflow:
 - Developers build and push code to Source Code Management system, GitHub.
 - A Webhook is associated with Git repository and Jenkins Pipeline.
 - Jenkins polls for the changes on GitHub repo and triggers the pipeline/built for every new commit.
@@ -16,14 +16,32 @@
 - The CI/CD pipeline has been created to automate the building and storing of Docker image based on updates and it's deployment as docker containers on AWS instances.
 
 ### Jenkins Workflow Results:
+- #### CI/CD Pipeline Arcictecture:
 
+![CICD_DevOps_Pipeline](https://github.com/roshangardi/DevOps-Docusign-Application/blob/master/Images/CICD_DevOps_Pipeline.png?raw=true)
+
+- #### Jenkins Pipeline Stages:
+
+![Pipeline_Stages](https://github.com/roshangardi/DevOps-Docusign-Application/blob/master/Images/PipelineJobOverview.png?raw=true)
+
+- #### AWS ECR Repository for docker images:
+
+![AWS_ECR_Repository](https://github.com/roshangardi/DevOps-Docusign-Application/blob/master/Images/AWS_ECR_Image_Repo.png?raw=true)
+
+- #### AWS EC2 instance running python application's docker container:
+
+![AWS_EC2_Docker](https://github.com/roshangardi/DevOps-Docusign-Application/blob/master/Images/Runningdockercontainer.png?raw=true)
+
+- #### Python Application up and running on 5000 port of EC2 instance:
+
+![Python_App_on_Docker](https://github.com/roshangardi/DevOps-Docusign-Application/blob/master/Images/DockerContainerApp.png?raw=true)
 
 ### Application Stack:
 - Python.
 - Docker.
 - Jenkins
-- AWS Elastic Container Registry
-- AWS EC2
+- AWS Elastic Container Registry.
+- AWS EC2.
 
 ### Intructions to run the application locally:
 - run.py is the entrypoint. Exectue run.py
