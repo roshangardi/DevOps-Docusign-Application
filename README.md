@@ -1,17 +1,29 @@
-### DevOps Docusign Application
+### DevOps Docusign Application:
 
-- A Web Application to register for an organizations Docusign PowerForm.
+- A complete Jenkins CI/CD Pipeline demonstration.
+- Automated Jenkins Continuos Integration and Continuos Deployment of Python Application to register for an organizations Docusign PowerForm.
 - The application is used by students of California State University Long Beach for Video Production Request by registering on application website.
 - The Application bypasses the PowerForm signer Information page and redirects to main Docusign PowerForm.
-- Built using Python Flask Framework, Docker and deployed on Azure using CI/CD pipelines.
-- The application is Dockerized and hosted on Microsoft Azure.
-- The CI/CD pipeline has been created to automate the building and storing of Docker image based on updates and it's deployment as docker containers on Azure instances.
 
-### Application Stack
+### Jenkins Workflow:
+- Developers build and push code to Source Code Management system, GitHub.
+- A Webhook is associated with Git repository and Jenkins Pipeline.
+- Jenkins polls for the changes on GitHub repo and triggers the pipeline/built for every new commit.
+- The application repository is cloned and docker image is been created by jenkins pipeline.
+- The docker image is pushed to Amazon ECR repository.
+- Python Application is ran as docker container on AWS EC2 instance on port 5000 by pulling the latest image from Amazon ECR.
+- All of the above stages of Jenkins pipeline are defined in Jenkinsfile and version controlled in GitHub repo.
+- The CI/CD pipeline has been created to automate the building and storing of Docker image based on updates and it's deployment as docker containers on AWS instances.
+
+### Jenkins Workflow Results:
+
+
+### Application Stack:
 - Python.
 - Docker.
-- Microsoft Azure pipelines (CI/CD Pipeline)
-- Microsoft Azure App Service
+- Jenkins
+- AWS Elastic Container Registry
+- AWS EC2
 
 ### Intructions to run the application locally:
 - run.py is the entrypoint. Exectue run.py
