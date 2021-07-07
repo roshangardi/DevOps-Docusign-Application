@@ -62,3 +62,18 @@
 `$ docker container ls`
 
 - Go to "http://localhost:5000/" on the webrowser of your choice and you'll see your dockerized application running.
+
+### Instructions to run the application on AWS EC2 instance as a Docker Container through Jenkins CI/CD pipline:
+
+- Launch an EC2 instance on AWS.
+- Create an AWS role and assign "AmazonEC2ContainerRegistryFullAccess" policy to the role.
+- Assign the role to EC2 instance.
+- Setup the working environment on instance by installing following applications:
+  - Docker
+  - Jenkins
+  - Git
+- Create and configure Jenkins Pipeline to poll from GitHubSCM.
+- Fetch Jenkins Pipeline definition from SCM.
+- Add Webhooks to the pipeline.
+- Manually run the pipeline to test.
+- Now for every new code change in SCM, the pipeline will be triggered and python application will be deployed as a docker container on EC2.
