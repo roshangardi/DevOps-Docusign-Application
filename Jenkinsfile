@@ -37,7 +37,7 @@ pipeline
       }
 
 		// Stopping Docker containers for cleaner Docker run
-		stage('stop previous containers') {
+		stage('Stop Old containers') {
 			 steps {
 			 script {
 				sh 'docker ps -f name=docusignapp -q | xargs --no-run-if-empty docker container stop'
@@ -54,7 +54,7 @@ pipeline
 		  }
 		  }
 
-	  stage('Email Stage') {
+	  stage('Send Notifications') {
 		steps {
 		  mail bcc: '', body: '''This is a test email.
 		This is to notify that the pipeline has reached the last stage.
