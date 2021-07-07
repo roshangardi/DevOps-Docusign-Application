@@ -1,9 +1,10 @@
 ### DevOps Docusign Application:
 
 - A complete Jenkins CI/CD Pipeline demonstration.
-- Automated Jenkins Continuos Integration and Continuos Deployment of Python Application to register for an organizations Docusign PowerForm.
-- The application is used by students of California State University Long Beach for Video Production Request by registering on application website.
-- The Application bypasses the PowerForm signer Information page and redirects to main Docusign PowerForm.
+- Automated Jenkins CI/CD Pipeline to deploy Python Application as a docker container on AWS EC2 instance.
+- The Python Application helps students register for an organization's Docusign PowerForm.
+- The application is used by students of California State University Long Beach for initiating Video Production Request to the Administrator.
+- The Application bypasses the PowerForm Signer Information page and redirects to main Docusign PowerForm to submit the request.
 
 ### Jenkins CI/CD Pipeline Workflow:
 - Developers build and push code to Source Code Management system, GitHub.
